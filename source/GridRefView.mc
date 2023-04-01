@@ -183,8 +183,8 @@ class GridRefView extends Ui.SimpleDataField {
       var directions = [ "N", "NNE","NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW","SW",  "WSW", "W", "WNW","NW",  "NNW", "N" ];
       if (info has :currentHeading && info.currentHeading != null )
       {
-        heading = info.currentHeading;
-        var degree_int = 0;
+//        heading = info.currentHeading;
+//        var degree_int = 0;
         var degrees = info.currentHeading * 180 / Math.PI;
         if (degrees  < 0) {
           degrees  += 360.0;

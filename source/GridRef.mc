@@ -13,6 +13,20 @@ class GridRef
     var deg2rad = Math.PI / 180.0d;
     var rad2deg = 180.0d / Math.PI;
 
+    // Constants
+    var WGS84_AXIS = 0;
+    var WGS84_ECCENTRIC = 0;
+    // Helmert transform parms:  https://en.wikipedia.org/wiki/Helmert_transformation
+    var Helmert_xp = 0;
+    var Helmert_yp =  0;
+    var Helmert_zp =  0;
+    var Helmert_xr = 0;
+    var Helmert_yr = 0;
+    var Helmert_zr = 0;
+    var Helmert_s = 0;
+    var Helmert_h = 0;
+    var alpha = 0;
+
     // Create grid ref from WSG84 lat /long
     function initialize(lat, lon, p )
     {
@@ -59,7 +73,7 @@ class GridRef
           errvalue = abs(lat0 - lat);
           lat = lat0;
         }
-        var h = p / Math.cos(lat) - v;
+//        var h = p / Math.cos(lat) - v;
         lat = lat* rad2deg;
         lon = lon * rad2deg;
 
